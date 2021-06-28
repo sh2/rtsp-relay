@@ -29,6 +29,8 @@ class InboundStreamWrapper {
     this.stream = spawn(
       ffmpegPath,
       [
+        '-rtsp_transport',
+        'tcp',
         '-i',
         url,
         '-f', // force format
